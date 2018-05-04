@@ -9,20 +9,25 @@
 
 namespace regioninfo {
 
-struct RegionInfo{
-	std::string filename;
+struct RegionInfo {
+  std::string regionName;
+  std::string filename;
+  double runtimeInSeconds;
+  unsigned long long numberOfCalls;
 };
 
 class RegionInfoManager {
-	public:
+public:
+  void addRegionInfo(std::string regionIdentifier, RegionInfo reginfo);
+  std::set<std::string> getAllFilenames() const;
+  std::set<std::string> getAllFunctionNames() const;
+  void addNumberOfCalls(std::string fName, unsigned long long numberOfCalls);
+  void addRuntimeData(std::string fName, double timeInSeconds);
 
-		void addRegionInfo(std::string regionIdentifier, RegionInfo reginfo);
-		std::set<std::string> getAllFilenames();
+  void printAll() const;
 
-		void printAll();
-
-	private:
-		std::map<std::string, RegionInfo> regInfos;
+private:
+  std::map<std::string, RegionInfo> regInfos;
 };
 
 } // namespace 

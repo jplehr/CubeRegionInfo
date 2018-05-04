@@ -13,9 +13,10 @@
  * \author roman
  * \author JPL
  */
-namespace CubeCallgraphBuilder {
+namespace cube_reader {
 
 	void build(std::string filePath, regioninfo::RegionInfoManager &rim);
+	void attachRuntimeInfo(std::string filePath, regioninfo::RegionInfoManager &rim);
 
 };
 
