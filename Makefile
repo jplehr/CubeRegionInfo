@@ -14,7 +14,7 @@ CXX := g++
 default: all
 
 
-all: fileprinter
+all: fileprinter library
 
 
 fileprinter: $(SOURCES)
