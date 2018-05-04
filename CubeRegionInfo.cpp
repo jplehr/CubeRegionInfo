@@ -36,7 +36,9 @@ void RegionInfoManager::addRuntimeData(std::string fName,
 }
 
 void RegionInfoManager::printAll() const {
-	for (const auto &ri : regInfos) {
-		std::cout << ri.first << " " << ri.second.filename << std::endl;
-	}
+  for (const auto &ri : regInfos) {
+    std::cout << ri.first << " " << ri.second.filename << "\n"
+              << ri.second.runtimeInSeconds << " at " << ri.second.numberOfCalls
+              << " calls" << std::endl;
+  }
 }

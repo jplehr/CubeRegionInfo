@@ -37,6 +37,7 @@ int main(int argc, char **argv) {
 
   std::cout << "Reading cube file" << std::endl;
   cube_reader::build(cubeFileName, rim);
+	cube_reader::attachRuntimeInfo(cubeFileName, rim);
 
   rim.printAll();
 
