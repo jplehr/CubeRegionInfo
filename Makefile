@@ -1,6 +1,6 @@
 
 LDFLAGS = -L$(CUPATH)/lib -lcube4
-CXXFLAGS = -std=c++14 -I. -I$(CUPATH)/include/cube
+CXXFLAGS = -std=c++14 -I. -I$(CUPATH)/include/cubelib
 
 
 SOURCES=\
